@@ -45,7 +45,7 @@ for (let i = 1; i < (str.length - 2); i++) {
         arr.push(x.join(''))
     }
 }
-console.log(arr, arr.length);
+
 let arrWithUniqStr = [...new Set(arr.map(a => a))]
 console.log(arrWithUniqStr, arrWithUniqStr.length);
 
