@@ -1,9 +1,5 @@
-let str = 'lambda';
+let str = '12345678';
 let arr = [];
-let arrOfStr = str.split('');
-
-
-arr.push(arrOfStr.join('.'))
 
 for (let i = 1; i < str.length; i++) {
     let start = str.slice(0, i) + '.';
@@ -12,7 +8,7 @@ for (let i = 1; i < str.length; i++) {
     arr.push(sum)
 }
 
-for (let i = 3; i < str.length; i++) {
+for (let i = 3; i <= str.length; i++) {
     let start = str.slice(0, i).split('').join('.');
     let end = str.slice(i, str.length);
     let sum = start + end
@@ -29,7 +25,7 @@ for (let i = str.length - 1; i > 1; i--) {
 for (let i = 1; i < (str.length); i++) {
     for (let j = 0; j < (str.length - (i + 2)); j++) {
         let y = str.split('');
-        let q = y.splice((j), arrOfStr.length - (j + i));
+        let q = y.splice((j), y.length - (j + i));
         y.splice(j, 0, ...(q.join('.')));
         arr.push(y.join(''))
     }
@@ -48,6 +44,3 @@ for (let i = 1; i < (str.length - 2); i++) {
 
 let arrWithUniqStr = [...new Set(arr.map(a => a))]
 console.log(arrWithUniqStr, arrWithUniqStr.length);
-
-
-
